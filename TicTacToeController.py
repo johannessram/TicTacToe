@@ -1,5 +1,7 @@
 from TicTacToeModel import TicTacToeModel
 from TicTacToeView import TicTacToeView
+from time import sleep
+# add a 1 second timer to simulate the thinking time
 
 class TicTacToeController():
     """
@@ -43,10 +45,10 @@ class TicTacToeController():
         while not self.model.has_sone_won(output='b'):
             pawn = self.view.Pawn(self.players[i % 2])
             print(f'It\'s {pawn}\'s turn')
-            coordinates = input('x? y? = ')
-            coordinates = self.translate_coordinates(coordinates)
-            coordinates = coordinates.split()
+            coordinates = input('Enter an empty cell coordinates, for example A1, B3, ... :\t')
             try:
+                coordinates = self.translate_coordinates(coordinates)
+                coordinates = coordinates.split()
                 x, y = list(map(int, coordinates))
                 self.model.make_human_move(x, y, pawn)
                 self.view.update_board(x, y, pawn)
@@ -87,10 +89,10 @@ class TicTacToeController():
             pawn = self.view.Pawn(self.players[i % 2])
             if pawn == user:
                 print(f'It\'s your turn')
-                coordinates = input('x? y? = ')
-                coordinates = self.translate_coordinates(coordinates)
-                coordinates = coordinates.split()
+                coordinates = input('Enter an empty cell coordinates, for example A1, B3, ... :\t')
                 try:
+                    coordinates = self.translate_coordinates(coordinates)
+                    coordinates = coordinates.split()
                     x, y = list(map(int, coordinates))
                     self.model.make_human_move(x, y, pawn)
                     self.view.update_board(x, y, pawn)
@@ -100,6 +102,7 @@ class TicTacToeController():
                     self.view.board.show_board()
                     self.view.error_message()
             elif pawn == ai:
+                    sleep(1)
                     x, y = self.model.make_ai_move(ai)
                     self.model.make_human_move(x, y, pawn)
                     self.view.update_board(x, y, pawn)

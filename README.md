@@ -8,7 +8,7 @@ I used Python to build this project because its purpose was to put into practice
 
 ### how to install and run it?
 - Clone this repository
-- run the file tic_tac_toe.py, which is like the main file : python3 tic_tac_toe.py (this may vary depending on your python version)
+- run the file main.py, which is like the main file : python3 main.py (this may vary depending on your python version)
 
 ### how to use the project?
 At the beginning of the game, we are asked to choose between {1, 2}, i.e. 1 for human versus AI and 2 for human versus human.

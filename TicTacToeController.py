@@ -59,7 +59,7 @@ class TicTacToeController():
                 self.view.error_message()
 
         winner = self.model.has_sone_won(output='p')
-        if winner in ('X', 'O'):
+        if winner in self.players:
             self.view.congratulate(winner)
         if winner == 'draw':
             self.view.announce_a_draw()

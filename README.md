@@ -1,30 +1,38 @@
-# Intelligent terminal TicTacToe game
+# <p style="color:pink; font-weight:bold;">Intelligent terminal TicTacToe game</p>
 
 My version of tic-tac-toe has two main modes: one with two human opponents who take turns filling an empty square with their piece, and the other with a human (you) against an artificial intelligence.
 
-### project description:
+## <p style="color:pink">Project description:</p>
 My project is my own implementation of a tic-tac-toe game in order to assimilate previously learned skills such as python and algorithm, and others.
-I used Python to build this project because its purpose was to put into practice the skills I had learned so far. Also, it was built following the MVC design pattern to facilitate eventual integration of a better view and debugging/error handling.
+I used Python to build this project because its purpose was to put into practice the skills I had learned so far. Also, it was built following the MVC design pattern to facilitate eventual integration of a better view as well as debugging/error handling.
 
-### how to install and run it?
+## <p style="color:pink">How to install and run it?</p>
 - Clone this repository
-- run the file main.py, which is like the main file : python3 main.py (this may vary depending on your python version)
 
-### how to use the project?
-At the beginning of the game, we are asked to choose between {1, 2}, i.e. 1 for human versus AI and 2 for human versus human.
-If we have chosen 1, we are prompted again to choose our avatar, either an "X" cross or an "O" cycle, and the avatar with an X sign ALWAYS places its piece first.
-Note: The sleep time of 1 second was set on purpose and serves as a sort of bottleneck for further development of the other levels. The artificial intelligence is based on the minimax algorithm.
-Otherwise, if we choose 2, we are directly asked for X's next move, or rather his first move. And so forth.
-The format of a move is a string consisting of a single letter in {A, B, C} followed by a number from 1 to 3. For example, the top leftmost cell is labeled A1, and the bottom rightmost cell is C3, ...
+```
+git clone ...
+```
 
-### eventual update:
+- run the file main.py
+
+```python
+python3 main.py
+```
+
+
+## <p style="color:pink">How to use the project?</p>
+1. You are prompted to choose between **`1`** and **`2`**
+    - 1 to play against AI
+    - 2 for a two-player mode game</br></br>
+2. If you choose to play against AI, you are prompted to choose your avatar **`X`** or **`O`**</br></br>
+3. Each player is allowed to place his pawn on any empty cell by providing its coordinates (Horizontal one before the Vertical one, for example **A3**, **B0**, ...)
+X begins then O, and so on</br></br>
+4. The one who manages to align three of their pawn first wins</br></br>
+
+
+
+## <p style="color:pink">Eventual update:</p>
 Further work on this project could include adding two additional levels: easy and hard.
 
-
-
-
-
-
-
-
+## <p style="color:pink">Licence:</p>
 This project is licensed under the Attribution-NonCommercial license.

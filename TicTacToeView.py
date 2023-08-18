@@ -1,18 +1,19 @@
 #!/bin/bash/python3.9
 
+"""This class is a console View for our tic-tac-toe game."""
 
 import os
+class MoveError(Exception):
+    pass
+
 class TicTacToeView():
-    """
-    This class is a console View for our tic-tac-toe game.
-    """
     class Board():
         cells = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
         # singleton
         instance = {'new': None}
         def __init__(self):
-            if self.instance['new'] != None:
-                raise 'Already an instance of Board working elsewhere...'
+            if self.instance['new'] is not None:
+                raise MoveError('Already an instance of Board working elsewhere...')
             self.instance['new'] = self
         
         def show_board(self):
@@ -39,12 +40,12 @@ class TicTacToeView():
     class Pawn():
         def __new__(cls, player):
             if player not in ('X', 'O'):
-                raise 'Not allowed to invite a third player!'
+                raise MoveError('Not allowed to invite a third player!')
             return str(player)
 
     def update_board(self, x, y, player: Pawn):
         if self.Board.cells[x][y] != ' ':
-            raise 'Cannot override whether oppenent\'s moves or yours'
+            raise MoveError('Cannot override whether oppenent\'s moves or yours')
         else:
             self.Board.cells[x][y] = player
             self.clear_screen()

@@ -1,3 +1,6 @@
+#!/bin/bash/python3.9
+
+
 import os
 class TicTacToeView():
     """

@@ -1,3 +1,6 @@
+#!/bin/bash/python3.9
+
+
 """
 This file contains the algorithm used to get the data in graph.py.
 Algorithms here consist of exploring all combination following some rules (p_s_turn), Minimax algorithm used to know the best next move.
@@ -5,7 +8,7 @@ Data structures here are graph and built-in list, dictionary used to implement a
 """
 
 grid = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
-first_key = ''.join(''.join(grid[i]) for i in range(3))
+FIRST_KEY = ''.join(''.join(grid[i]) for i in range(3))
 graph = {}
 opportunity = {}
 
@@ -52,7 +55,7 @@ def _f_has_sone_won(key):
             return 'draw'
         return ' '
 
-# f stands for flattened, like the grid has been flattened to become 1*9 insteand of 3*3
+# f stands for flattened, like the grid has been flattened to become 1*9 instead of 3*3
 def f_has_sone_won(key, output='p'):
     op = _f_has_sone_won(key)
     if output == 'p':

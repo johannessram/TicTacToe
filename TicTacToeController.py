@@ -1,3 +1,6 @@
+#!/bin/bash/python3.9
+
+
 from TicTacToeModel import TicTacToeModel
 from TicTacToeView import TicTacToeView
 from time import sleep

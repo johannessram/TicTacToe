@@ -1,3 +1,6 @@
+#!/bin/bash/python3.9
+
+
 class TicTacToeModel():
     """
     This class contains all primary code for the functionalities of tic-tac-toe including making move, checking who has won, and play against AI.
@@ -80,15 +83,6 @@ class TicTacToeModel():
             max_opp = max(max_opp)
             further_opp = [k for k in graph[state] if opportunity[k] == max_opp]
             return choice(further_opp)
-
-        def tree_depth(further: dict, local_max):
-            for st in further_opp:
-                # create a new instance of tic_tac_toe model because only there exists an implementation of __has_sone_won
-                pass
-
-
-
-
 
         def key_to_grid(key):
             for i in range(3):

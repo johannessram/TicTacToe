@@ -9,13 +9,13 @@ I used Python to build this project because its purpose was to put into practice
 ## <p style="color:pink">How to install and run it?</p>
 - Clone this repository
 
-```
-git clone ...
+```bash
+git clone https://github.com/johannessram/TicTacToe.git
 ```
 
 - run the file main.py
 
-```python
+```bash
 python3 main.py
 ```
 

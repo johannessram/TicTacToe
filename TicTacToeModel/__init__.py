@@ -4,7 +4,7 @@ from random import choice
 from TicTacToeModel.graph import graph
 from TicTacToeModel.AiMediumNextMove import AiMediumNextMove
 from GameException.PlayerError import PlayerError
-from GameException.MoveError import MoveError
+from GameException.UnauthorizedMoveError import UnauthorizedMoveError
 
 
 class TicTacToeModel():

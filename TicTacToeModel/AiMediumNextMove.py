@@ -2,7 +2,7 @@
 
 """
 This file contains the code that computes the next move of the AI of level Medium.
-Medium level tic-tac-toe player mean the player knows how the rules about the possible move, and knows how to prevent the oppoonent from winning.
+Medium level tic-tac-toe player means the player knows the rules about the possible moves, and knows how to prevent the oppoonent from winning.
 """
 
 from random import choice

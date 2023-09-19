@@ -1,7 +1,7 @@
 #!/bin/bash/python3.9
 
 import os
-from GameException.MoveError import MoveError
+from GameException.UnauthorizedMoveError import UnauthorizedMoveError
 
 class Board():
     """
@@ -12,7 +12,7 @@ class Board():
     instance = {'new': None}
     def __init__(self):
         if self.instance['new'] is not None:
-            raise MoveError('Already an instance of Board working elsewhere...')
+            raise UnauthorizedMoveError('Already an instance of Board working elsewhere...')
         self.instance['new'] = self
 
     def show_board(self):

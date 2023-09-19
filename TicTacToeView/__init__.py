@@ -5,7 +5,7 @@
 import os
 from TicTacToeView.Board import Board
 from TicTacToeView.Pawn import Pawn
-from GameException.MoveError import MoveError
+from GameException.UnauthorizedMoveError import UnauthorizedMoveError
 
 class TicTacToeView():
     Board = Board
@@ -15,7 +15,7 @@ class TicTacToeView():
 
     def update_board(self, x=3, y=3, player:Pawn=''):
         if self.Board.cells[x][y] != ' ':
-            raise MoveError('Cannot override whether oppenent\'s moves or yours')
+            raise UnauthorizedMoveError('Cannot override whether oppenent\'s moves or yours')
         else:
             self.Board.cells[x][y] = player
             self.clear_screen()

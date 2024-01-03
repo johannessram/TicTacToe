@@ -25,7 +25,7 @@ class TicTacToeModel():
         if player not in ('X', 'O'):
             raise PlayerError('Player unkown')
         if self.__grid[x][y] != ' ':
-            raise MoveError('Cannot override previous moves')
+            raise UnauthorizedMoveError('Cannot override previous moves')
         self.__grid[x][y] = player
 
     # for testing purpose

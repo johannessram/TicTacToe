@@ -42,6 +42,7 @@ class TicTacToeController():
             self.view.display(f'It\'s {current_player}\'s turn')
             self.game_status['number_of_moves'] += current_player_move(current_player)
         
+        print('anyway')
         self.announce_the_end()
 
     def parse_coordinates(self, yx: str):

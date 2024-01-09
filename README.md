@@ -27,8 +27,8 @@ python3 main.py
 2. If you choose to play against AI, you are prompted to choose your avatar **`X`** or **`O`**</br>
 3. Each player is allowed to place his pawn on any empty cell by providing its coordinates (Horizontal one before the Vertical one, for example **A3**, **B0**, ...)
 X begins then O, and so on</br>
+In the following image, all cells are empty.
 ![virgin grid](Images/VirginGrid.png)
-In this image, all cells are empty.
 5. The one who manages to align three of their pawn first wins</br>
 
 

@@ -31,9 +31,10 @@ class CheckGameConclusion(ABC):
         if game.game_status['number_of_moves'] < (ONE_PLAYER_MOVE + ANOTHER_PLAYER_MOVE):
             return None
         grid = game.model.get_grid()
-        if game.game_status['number_of_moves'] > MAXIMUM_AVAILABLE_CELL:
+        winner = CheckGameConclusion.__check_diagonal_adjacency(grid) or CheckGameConclusion.__check_othogonal_adjacency(grid)
+        if game.game_status['number_of_moves'] >= MAXIMUM_AVAILABLE_CELL and not winner:
             return 'draw'
-        return CheckGameConclusion.__check_diagonal_adjacency(grid) or CheckGameConclusion.__check_othogonal_adjacency(grid)
+        return winner
 
     @staticmethod
     def game_ends(game, boolean_output=False) -> bool:

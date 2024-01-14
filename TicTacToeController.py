@@ -22,7 +22,7 @@ class TicTacToeController():
     def __init__(self):
         self.model = TicTacToeModel()
         self.view = TicTacToeView()
-        self.view.board = self.view.Board()
+        self.view.board = self.view.board_instance
         self.letter_coordinates = ('A', 'B', 'C')
         self.players = ('X', 'O')
 
@@ -42,7 +42,6 @@ class TicTacToeController():
             self.view.display(f'It\'s {current_player}\'s turn')
             self.game_status['number_of_moves'] += current_player_move(current_player)
         
-        print('anyway')
         self.announce_the_end()
 
     def parse_coordinates(self, yx: str):
@@ -50,8 +49,10 @@ class TicTacToeController():
             REAJUST_INDEX = - 1
             column = yx[0].upper()
             column = self.letter_coordinates.index(column)
-            line = int(yx[1]) + REAJUST_INDEX
+            line = int(yx[1:]) + REAJUST_INDEX
 
+            if line > 3:
+                raise CellError('Bad cell coordinates!!')
             return {'x': line, 'y': column}
         except ValueError:
             raise CellError('Bad cell coordinates!!')
@@ -115,11 +116,13 @@ class TicTacToeController():
         coordinates = self.model.make_ai_move(player)
         sleep(TIME_TO_SIMULATE_HUMAN_THINKING)
         self.view.display('It\'s your turn')
+
         return self.make_move(**coordinates, player=player)
 
     def announce_the_end(self):
         winner = CheckGameConclusion.game_ends(self, boolean_output=False)
         ai = self.game_status.get('ai')
+
         if winner == 'draw':
             self.view.announce_a_draw()
         elif not ai:

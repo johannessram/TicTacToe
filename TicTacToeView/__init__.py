@@ -10,6 +10,9 @@ from GameException.UnauthorizedMoveError import UnauthorizedMoveError
 class TicTacToeView():
     Board = Board
     Pawn = Pawn
+    def __init__(self):
+        self.board_instance = Board()
+
     def clear_screen(self):
         os.system('clear')
 
@@ -48,12 +51,12 @@ class TicTacToeView():
         return input(message)
 
     def announce_a_draw(self):
-        self.Board().clear()
         print('*********It\'s a draw**********')
 
     def announce_the_end(self, winner):
         PLAYERS_LIST = (Pawn('X'), Pawn('O'))
-        if winner in PLAYERS_LIST:
+        players_pronouns = ('I', 'You')
+        if winner in PLAYERS_LIST or winner in players_pronouns:
             self.congratulate(winner)
         if winner == 'draw':
             self.announce_a_draw()

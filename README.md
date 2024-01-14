@@ -2,9 +2,11 @@
 
 My version of tic-tac-toe has two main modes: one with two human opponents who take turns filling an empty square with their piece, and the other with a human (you) against an artificial intelligence, **a bot**.
 
+
 ## <p style="color:pink">Project description:</p>
 My project is my own implementation of a tic-tac-toe game in order to assimilate previously learned skills such as python and algorithm, symbolic AI and others.
 I used Python to build this project because its purpose was to put into practice the skills I had learned so far. Also, it was built following the MVC design pattern to facilitate eventual integration of a better view as well as debugging/error handling.
+
 
 ## <p style="color:pink">How to install and run it?</p>
 - Clone this repository
@@ -16,7 +18,7 @@ git clone https://github.com/johannessram/TicTacToe.git
 - run the file main.py
 
 ```bash
-python3 main.py
+python3 .
 ```
 
 
@@ -31,10 +33,6 @@ In the following image, all cells are empty.</br>
 ![virgin grid](Images/VirginGrid.png)
 5. The one who manages to align three of their pawn first wins</br>
 
-
-
-## <p style="color:pink">Eventual update:</p>
-Further work on this project could include adding two additional levels: easy and hard.
 
 ## <p style="color:pink">Licence:</p>
 This project is licensed under the Attribution-NonCommercial license.

@@ -18,7 +18,7 @@ git clone https://github.com/johannessram/TicTacToe.git
 - run the file main.py
 
 ```bash
-python3 .
+python3 TicTacToe
 ```
 
 

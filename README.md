@@ -1,6 +1,7 @@
 # <p style="color:pink; font-weight:bold;"> AI Tic-tac-toe player with Python </p>
 
-My version of tic-tac-toe has two main modes: one with two human opponents who take turns filling an empty square with their piece, and the other with a human (you) against an artificial intelligence, **a bot**.
+This is a tic-tac-toe **BOT** incorporated into a console game. </br>
+My version of tic-tac-toe has two main modes: one with two human opponents who take turns filling an empty square with their piece, and the other with a human (you) against an artificial intelligence, the bot.
 
 
 ## <p style="color:pink">Project description:</p>
@@ -15,7 +16,7 @@ I used Python to build this project because its purpose was to put into practice
 git clone https://github.com/johannessram/TicTacToe.git
 ```
 
-- run the file main.py
+- run the project
 
 ```bash
 python3 TicTacToe
